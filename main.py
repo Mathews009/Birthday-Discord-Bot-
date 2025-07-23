@@ -22,13 +22,6 @@ handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w'
 
 app = Flask(__name__)
 
-@app.route('/')
-def index():
-    return "Hello from Render!"
-
-if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port)
 
 
 # Intents
@@ -495,3 +488,12 @@ async def upcoming_birthdays(ctx):
 
 # Run the Bot
 bot.run(token, log_handler=handler, log_level=logging.DEBUG)
+
+@app.route('/')
+def index():
+    return "Hello from Render!"
+
+if __name__ == '__main__':
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
+
