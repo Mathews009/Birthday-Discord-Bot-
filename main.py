@@ -9,7 +9,7 @@ import json
 import aiohttp
 import re
 from datetime import datetime, timedelta
-from flask import flask
+from flask import Flask
 
 
 
